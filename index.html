@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404: Junior Found</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+  <div class="container header__inner">
+    <div class="logo">404: Junior Found</div>
+
+    <nav class="nav">
+      <a href="#status" class="nav__link">Статус</a>
+      <a href="#skills" class="nav__link">Навыки</a>
+      <a href="#ideas" class="nav__link">Идеи</a>
+      <a href="#fun" class="nav__link">Fun</a>
+      <a href="#contacts" class="nav__link">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+<section id="status"></section>
+<section id="skills"></section>
+<section id="ideas"></section>
+<section id="fun"></section>
+<section id="contacts"></section>
+
+<section id="status" class="section section--hero">
+  <div class="container">
+    <div class="card hero">
+
+      <p class="hero__name">👤 Junior Dev</p>
+      <p class="hero__days">
+        🗓 В обучении: <span id="days">0</span> дней
+      </p>
+
+      <p class="hero__quote" id="quote">
+        💬 Сегодня отличный день для кода
+      </p>
+
+      <button class="btn btn--primary" id="moodBtn">
+        😄 Сменить настроение
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <div class="container">
+    <div class="about">
+
+      <!-- левая колонка -->
+      <div class="about__text">
+        <h2 class="section__title">Обо мне</h2>
+        <p>Меня увлекает разработка игр и сайтов — люблю превращать идеи в рабочие проекты.</p>
+        <p>Мне нравится разбираться, как всё устроено под капотом, и писать чистый, понятный код.</p>
+        <p>Экспериментирую с дизайном, анимациями и логикой, чтобы проекты были живыми.</p>
+        <p>Постоянно учусь новому и прокачиваю навыки каждый день.</p>
+      </div>
+
+      <!-- правая колонка -->
+      <div class="about__skills">
+        <h2 class="section__title">Навыки</h2>
+
+        <div class="skill">
+          <span class="skill__name">HTML</span>
+          <div class="skill__bar">
+            <div class="skill__progress" data-progress="100"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span class="skill__name">CSS</span>
+          <div class="skill__bar">
+            <div class="skill__progress" data-progress="75"></div>
+          </div>
+        </div>
+
+        <div class="skill">
+          <span class="skill__name">JavaScript</span>
+          <div class="skill__bar">
+            <div class="skill__progress" data-progress="40"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="todo" class="section">
+  <div class="container">
+    <div class="card todo">
+
+      <h2 class="section__title">Что изучаю</h2>
+
+      <ul id="todo-list" class="todo__list">
+        <!-- задачи будут добавляться через JS -->
+      </ul>
+
+      <div class="todo__input">
+        <input type="text" id="new-task" placeholder="Добавить новую задачу">
+        <button id="add-task" class="btn btn--primary">➕ Добавить</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="ideas" class="section section--hero">
+  <div class="container">
+    <div class="card generator">
+
+      <h2 class="section__title">Застрял? Лови идею</h2>
+
+      <div class="generator__output" id="idea-output">
+        <p id="project-idea">💡 Проект: ...</p>
+        <p id="challenge">🔥 Челлендж дня: ...</p>
+        <p id="js-task">💻 Задание по JS: ...</p>
+      </div>
+
+      <button class="btn btn--primary" id="generate-btn">🎲 Сгенерировать</button>
+
+    </div>
+  </div>
+</section>
+
+<section id="fun" class="section section--hero">
+  <div class="container">
+    <div class="card fun">
+
+      <h2 class="section__title">Какой ты разработчик?</h2>
+
+      <div class="fun__question">
+        <p>Нажми кнопку, чтобы узнать свой тип!</p>
+      </div>
+
+      <button class="btn btn--primary" id="fun-btn">🎲 Узнать</button>
+
+      <p id="fun-result" class="fun__result">🤔 Результат появится здесь</p>
+
+    </div>
+  </div>
+</section>
+
+<section id="contacts" class="section section--hero">
+  <div class="container">
+    <div class="card contacts">
+
+      <h2 class="section__title">Контакты</h2>
+
+      <div class="contacts__links">
+        <a href="https://github.com/username" target="_blank" class="contact-link">GitHub</a>
+        <a href="https://t.me/username" target="_blank" class="contact-link">Telegram</a>
+        <a href="mailto:email@example.com" class="contact-link">Email</a>
+      </div>
+
+      <p class="contacts__note">Сделано без фреймворков ✨</p>
+
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>

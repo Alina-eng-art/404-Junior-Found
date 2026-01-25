@@ -1,0 +1,320 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  background: #e2dbc6;
+  color: #000000;
+}
+
+/* контейнер */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #e2dbc6(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #1e293b;
+  z-index: 100;
+}
+
+.header__inner {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* logo */
+.logo {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* nav */
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: #38bdf8;
+}
+
+/* underline hover */
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s;
+}
+
+.nav__link:hover::after {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  padding: 120px 0;
+}
+
+.section--hero {
+  padding-top: 160px; /* из-за fixed header */
+}
+
+.card {
+  background: #f3dba7;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero__name {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.hero__days {
+  font-size: 16px;
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.hero__quote {
+  font-size: 20px;
+  margin-bottom: 32px;
+  color: #000000;
+}
+
+/* кнопка */
+.btn {
+  border: none;
+  cursor: pointer;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 16px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn--primary {
+  background: #d5ecf5;
+  color: #020617;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+}
+
+
+.section__title {
+  font-size: 26px;
+  margin-bottom: 24px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about__text p {
+  margin-bottom: 16px;
+  color: #000000;
+  line-height: 1.6;
+}
+
+/* навыки */
+.skill {
+  margin-bottom: 24px;
+}
+
+.skill__name {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.skill__bar {
+  background: #1e293b;
+  border-radius: 10px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.skill__progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #38bdf8, #6366f1);
+  border-radius: 10px;
+  transition: width 1.5s ease;
+}
+
+
+
+.todo__list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.todo__list li {
+  background: #1e293b;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #e5e7eb;
+}
+
+.todo__list li.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo__list button {
+  background: #ef4444;
+  border: none;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.todo__list button:hover {
+  background: #f87171;
+}
+
+.todo__input {
+  display: flex;
+  gap: 12px;
+}
+
+#new-task {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+}
+
+.generator {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: #f3dba7;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.generator__output p {
+  font-size: 18px;
+  margin: 16px 0;
+  color: #212527;
+  transition: all 0.3s;
+}
+
+/* кнопка */
+#generate-btn {
+  margin-top: 24px;
+  font-size: 16px;
+}
+
+
+.fun {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  background:#f3dba7;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.fun__question p {
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #252420;
+}
+
+.fun__result {
+  font-size: 22px;
+  margin-top: 24px;
+  color: #38bdf8;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.contacts {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px;
+  border-radius: 20px;
+  background: #f3dba7;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.contacts__links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 24px 0;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.3s;
+  background: #1e293b;
+}
+
+.contact-link:hover {
+  transform: translateY(-3px);
+  background: #2563eb;
+  color: #fff;
+}
+
+.contacts__note {
+  font-size: 14px;
+  color: #94a3b8;
+  margin-top: 20px;
+}
